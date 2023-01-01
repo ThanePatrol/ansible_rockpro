@@ -1,0 +1,43 @@
+- name: Install packages
+  ansible.builtin.apt:
+    pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - python3-pip
+      - virtualenv
+      - python3-setuptools
+    state: latest
+    update_cache: true
+
+# note that this GPG key is for ubuntu/derivatives
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker repo
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    state: present
+
+- name: Update apt and install docker
+  ansible.builtin.apt:
+    name: docker-ce
+    state: latest
+    update_cache: true
+
+- name: Install docker module for python
+  pip:
+    name: docker
+
+- name: Create docker group
+  ansible.builtin.shell: groupadd docker
+  ignore_errors: yes
+
+- name: Add user to docker group
+  ansible.builtin.shell: usermod -aG docker hugh
+
+- name: Update group membership
+  ansible.builtin.shell: newgrp docker

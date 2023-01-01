@@ -1,0 +1,9 @@
+- name: Install oh-my-zsh
+  shell:
+    cmd: "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+- name: Change shell to zsh
+  become: yes
+  user:
+    name: hugh
+    shell: /bin/zsh

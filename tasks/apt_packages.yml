@@ -1,0 +1,11 @@
+- name: Install packages
+  ansible.builtin.apt:
+    pkg:
+      - btop
+      - zsh
+      - curl
+      - batcat
+      - rclone
+      - tmux
+
+

@@ -1,7 +1,9 @@
 # ansible_rockpro
 Ansible playbook for configuration of Pine RockPro64
 
-# Todo
+Assumes username of hugh
+
+# Done
 - Docker install
 - btop
 - zsh
@@ -9,3 +11,6 @@ Ansible playbook for configuration of Pine RockPro64
 - curl
 - batcat
 - rclone
+- tmux
+
+# todo
