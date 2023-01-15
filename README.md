@@ -14,3 +14,5 @@ Assumes username of hugh
 - tmux
 
 # todo
+- set up docker to start on system boot
+- 
