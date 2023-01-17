@@ -25,6 +25,7 @@ Assumes username of hugh
 - ssh-copy-id keys to remote
 - disable password login in /etc/ssh/sshd_config
 - change root password and user password to something secure in keepass
+- symlinking python3 as required for ansible: `ln -s /usr/bin/python3 /usr/bin/python`
 
 # Steps to pull onto device
 `ansible-pull -U https://github.com/ThanePatrol/ansible_rockpro`

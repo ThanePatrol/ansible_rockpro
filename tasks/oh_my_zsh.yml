@@ -1,6 +1,6 @@
 - name: Install oh-my-zsh
   shell:
-    cmd: "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 - name: Change shell to zsh
   become: yes
