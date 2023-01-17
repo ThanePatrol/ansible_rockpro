@@ -35,11 +35,17 @@
     name: docker
 
 - name: Create docker group
-  ansible.builtin.shell: groupadd docker
+  group:
+    name: docker
+    state: present
   ignore_errors: yes
 
 - name: Add user to docker group
-  ansible.builtin.shell: usermod -aG docker hugh
+  user:
+    name: "hugh"
+    groups: docker
+    append: yes
 
-- name: Update group membership
-  ansible.builtin.shell: newgrp docker
+- name: Refresh groups
+  ansible.builtin.meta:
+    reset_connection
