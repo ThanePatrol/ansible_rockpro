@@ -8,4 +8,4 @@
   tasks:
     - include: tasks/apt_packages.yml
     - include: tasks/docker_packages.yml
-    - include: tasks/oh_my_zsh.yml
+    #- include: tasks/oh_my_zsh.yml
