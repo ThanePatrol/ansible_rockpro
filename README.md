@@ -27,14 +27,16 @@ Assumes username of hugh
 - reboot
 - install os
 - create username of hugh
-- sudo apt update && sudo apt upgrade -y && sudo apt install ansible -y 
+- create setup.sh file
+- `chmod +x setup.sh`
+- `sudo ./setup.sh`
 - update board firmware with sudo armbian-config
 - add to desktop .ssh/config file
 - ssh-copy-id keys to remote
-- disable password login in /etc/ssh/sshd_config by using
-- `sudo bash -c 'echo "PasswordAuthentication no" >> /etc/ssh/ssh_config.d/no_pass.conf'`
 - change root password and user password to something secure in keepass via `passwd`
-- symlinking python3 as required for ansible: `ln -s /usr/bin/python3 /usr/bin/python`
-- `ansible-pull -U https://github.com/ThanePatrol/ansible_rockpro`
 
 # K3s setup
+
+
+# OpenBSD Router setup
+- 
