@@ -27,10 +27,10 @@ Assumes username of hugh
 - reboot
 - install os
 - create username of hugh
+- ~~update board firmware with sudo armbian-config~~ 
 - create setup.sh file
 - `chmod +x setup.sh`
 - `sudo ./setup.sh`
-- update board firmware with sudo armbian-config
 - add to desktop .ssh/config file
 - ssh-copy-id keys to remote
 - change root password and user password to something secure in keepass via `passwd`
