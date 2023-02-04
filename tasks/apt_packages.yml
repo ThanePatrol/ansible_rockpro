@@ -8,4 +8,8 @@
       - rclone
       - tmux
 
+      # needed for longhorn
+      - nfs-common
+      - open-iscsi
+
 
