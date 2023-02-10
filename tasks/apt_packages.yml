@@ -12,4 +12,10 @@
       - nfs-common
       - open-iscsi
 
+      # needed for containerd runtime
+      - apparmor
+      - apparmor-utils
+
+
+
 
