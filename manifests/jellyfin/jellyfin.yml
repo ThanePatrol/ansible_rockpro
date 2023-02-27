@@ -1,0 +1,47 @@
+image:
+  repository: jellyfin/jellyfin
+  tag: latest
+  pullPolicy: IfNotPresent
+
+enableDLNA: false
+
+service:
+  type: NodePort
+  port: 8096
+  annotations: {}
+
+ingress:
+  enabled: false
+  annotations: {}
+  path: /
+  hosts:
+    - chart-example.local
+  tls: []
+
+persistence:
+  config:
+    enabled: true
+    storageClass: longhorn
+    accessMode: ReadWriteOnce
+    size: 0.5Gi
+  media:
+    enabled: true
+    storageClass: longhorn
+    accessMode: ReadWriteOnce
+    size: 50Gi
+  extraExistingClaimMounts: []
+
+resources:
+  limits:
+    memory: "3Gi"
+    cpu: "4"
+  requests:
+    memory: "2Gi"
+    cpu: "2"
+
+nodeSelector:
+  kubernetes.io/hostname: rockpro02,rockpro03,rockpro04
+
+tolerations: []
+
+affinity: {}
